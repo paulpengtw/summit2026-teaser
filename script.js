@@ -135,7 +135,7 @@ function updateIndicatorsOnScroll() {
 
     // Update debug info
     if (debugInfo) {
-      debugInfo.textContent = `CC-BY`;
+      debugInfo.textContent = ` `;
     }
 
     // Update the indicators
@@ -143,7 +143,7 @@ function updateIndicatorsOnScroll() {
   } else {
     // Update debug info when not in circles section
     if (debugInfo) {
-      debugInfo.textContent = `CC-BY`;
+      debugInfo.textContent = ` `;
     }
   }
 }
