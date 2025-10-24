@@ -3,7 +3,7 @@
 body {
   font-family: "Onest", sans-serif;
   background-color: #0d0d0d;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@ body {
   align-items: flex-end;
   height: 90vh;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0 0px;
   box-sizing: border-box;
 }
@@ -43,7 +43,7 @@ body {
   align-items: flex-end;
   height: 35vh;
   width: 90%;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0 0px;
   box-sizing: border-box;
 }
@@ -475,7 +475,6 @@ a {
   width: 25px;
   margin-right: 5%;
   animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  cursor: pointer;
   height: 20px;
 }
 
@@ -544,12 +543,12 @@ footer {
   /* margin-top: 80vh; */
   z-index: 500;
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-end;
+  align-items: center;
   padding: 5rem 2vw;
   position: relative;
 }
@@ -637,7 +636,17 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+  footer {
+    h3 {
+      color: #fff
+    }
+  }
+
+  .col {
+    padding: calc(0.3 * var(--m)) calc(0.6 * var(--m));
+  }
+
   :root {
     --m: 3rem;
   }
@@ -646,9 +655,24 @@ a {
 @media screen and (max-width: 700px) {
   footer {
     flex-direction: column;
-    padding: 5rem 20vw;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 20vw;
+    row-gap: 1rem;
+    h3 {
+      color: #fff;
+      margin-bottom: 0.5rem
+    }
   }
+
+  .section-last {
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
   .col {
     width: 100%;
+    padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
   }
 }
