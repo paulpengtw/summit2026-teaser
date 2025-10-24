@@ -652,7 +652,7 @@ a {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   footer {
     flex-direction: column;
     justify-content: space-evenly;
@@ -674,5 +674,11 @@ a {
   .col {
     width: 100%;
     padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col {
+    padding: calc(0.3 * var(--m)) calc(0.5 * var(--m));
   }
 }
